@@ -46,11 +46,25 @@ html, body {
         box-sizing: border-box;
     }
     
-    /* Center all content */
+    /* Center all content except contact section */
     .section {
         text-align: center;
         width: 100%;
         max-width: 100%;
+    }
+    
+    /* Keep contact section left-aligned on mobile */
+    .contact-info {
+        text-align: left;
+    }
+    
+    .contact-details {
+        text-align: left;
+    }
+    
+    .contact-details h4,
+    .contact-details p {
+        text-align: left;
     }
     
     /* Fix grid layouts for mobile */
