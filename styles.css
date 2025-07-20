@@ -34,6 +34,52 @@ html, body {
     width: 100%;
 }
 
+/* Disclaimer Section Styling */
+.disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.disclaimer-content h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.disclaimer-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.disclaimer-text p {
+    margin-bottom: 1rem;
+}
+
+.disclaimer-text strong {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Mobile disclaimer styling */
+@media (max-width: 768px) {
+    .disclaimer-content {
+        padding: 0 20px;
+    }
+    
+    .disclaimer-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .disclaimer-text {
+        font-size: 0.85rem;
+    }
+}
+
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
     /* Ensure all containers are properly centered */
@@ -872,6 +918,14 @@ body.scrolled::before {
     color: #666;
     font-weight: 400;
     font-size: 0.875rem;
+}
+
+.footer-disclaimer {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+    line-height: 1.4;
 }
 
 /* Responsive Design */
