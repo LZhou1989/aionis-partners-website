@@ -36,11 +36,6 @@ html, body {
 
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    
     /* Ensure all containers are properly centered */
     .container,
     .nav-container,
@@ -872,16 +867,17 @@ body.scrolled::before {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2rem;
         padding: 0 20px;
         max-width: 100%;
-        overflow-x: hidden;
         margin: 0 auto;
         box-sizing: border-box;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
     }
     
     .hero-graphic {
@@ -957,7 +953,7 @@ body.scrolled::before {
         transform: none;
     }
     
-    /* Ensure smooth scrolling */
+    /* Fix investment cards for mobile */
     .investment-cards {
         display: flex;
         flex-direction: column;
@@ -972,6 +968,7 @@ body.scrolled::before {
         max-width: 100%;
         margin: 0 auto;
         text-align: center;
+        padding: 1.5rem;
     }
 }
 
