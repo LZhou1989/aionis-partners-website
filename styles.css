@@ -46,38 +46,40 @@ html, body {
         box-sizing: border-box;
     }
     
-    /* Center all content except contact section */
-    .section {
+    /* Center specific sections, not all sections */
+    .section:not(#contact) {
         text-align: center;
         width: 100%;
         max-width: 100%;
     }
     
-    /* Keep contact section left-aligned on mobile */
+    /* Contact section - left aligned */
     #contact {
-        text-align: left !important;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
     }
     
     #contact .section-header {
-        text-align: center !important;
+        text-align: center;
     }
     
     #contact .contact-info {
-        text-align: left !important;
+        text-align: left;
     }
     
     #contact .contact-details {
-        text-align: left !important;
+        text-align: left;
     }
     
     #contact .contact-details h4,
     #contact .contact-details p,
     #contact .contact-details a {
-        text-align: left !important;
+        text-align: left;
     }
     
     #contact .contact-item {
-        text-align: left !important;
+        text-align: left;
     }
     
     /* Fix footer alignment on mobile */
