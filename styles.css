@@ -12,6 +12,26 @@ body {
     background-color: #ffffff;
     overflow-x: hidden;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Professional Background Image */
@@ -83,7 +103,7 @@ body.scrolled::before {
 }
 
 .nav-logo-image {
-    height: 32px;
+    height: 24px;
     width: auto;
     object-fit: contain;
 }
@@ -766,6 +786,8 @@ body.scrolled::before {
 @media (max-width: 768px) {
     .container {
         padding: 0 24px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     .nav-container {
@@ -799,6 +821,8 @@ body.scrolled::before {
         text-align: center;
         gap: 4rem;
         padding: 0 24px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     .hero-title {
@@ -847,6 +871,29 @@ body.scrolled::before {
     
     .nav-logo h2 {
         font-size: 1.125rem;
+    }
+    
+    /* Prevent card shifting on mobile */
+    .service-card,
+    .team-member,
+    .focus-card,
+    .term-card,
+    .card {
+        transform: none !important;
+        transition: none !important;
+        will-change: auto;
+    }
+    
+    /* Smooth fade-in for mobile */
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: opacity 0.6s ease;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+        transform: none;
     }
 }
 

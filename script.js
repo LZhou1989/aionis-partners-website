@@ -189,6 +189,32 @@ function checkInvestorAccess() {
 // Run on page load
 document.addEventListener('DOMContentLoaded', checkInvestorAccess);
 
+// Smooth scroll animations for mobile
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    const elementsToAnimate = document.querySelectorAll('.section, .service-card, .team-member, .focus-card, .term-card, .card');
+    elementsToAnimate.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+}
+
+// Initialize animations
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
 // Counter animation for statistics (if needed)
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
