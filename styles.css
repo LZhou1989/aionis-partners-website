@@ -54,6 +54,10 @@ html, body {
     }
     
     /* Keep contact section left-aligned on mobile */
+    #contact {
+        text-align: left;
+    }
+    
     .contact-info {
         text-align: left;
     }
@@ -63,7 +67,12 @@ html, body {
     }
     
     .contact-details h4,
-    .contact-details p {
+    .contact-details p,
+    .contact-details a {
+        text-align: left;
+    }
+    
+    .contact-item {
         text-align: left;
     }
     
