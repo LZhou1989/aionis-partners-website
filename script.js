@@ -212,8 +212,31 @@ function initScrollAnimations() {
     });
 }
 
-// Initialize animations
-document.addEventListener('DOMContentLoaded', initScrollAnimations);
+// Enable smooth scrolling for mobile
+function enableSmoothScrolling() {
+    // Add smooth scrolling to all internal links
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Initialize animations and smooth scrolling
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollAnimations();
+    enableSmoothScrolling();
+});
 
 // Counter animation for statistics (if needed)
 function animateCounter(element, target, duration = 2000) {
