@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Dashboard - Aionis Partners</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-container">
+                        <img src="Logo3.jpg" alt="Aionis Partners Logo" class="nav-logo-image">
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#what-we-do" class="nav-link">Strategy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#who-we-are" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#focus" class="nav-link">Track Record</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#investment-process" class="nav-link">Process</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#fund-terms" class="nav-link">Fund Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#documents" class="nav-link">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Overview Section -->
+    <section id="dashboard" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investor Dashboard</h2>
+                <p class="section-subtitle">
+                    Welcome to your investment portal. Access your portfolio performance, documents, and fund information.
+                </p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Portfolio Value</h3>
+                    <p class="dashboard-value">€2,450,000</p>
+                    <p class="dashboard-change positive">+12.3% YTD</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Your Performance</h3>
+                    <p class="dashboard-value">17.30%</p>
+                    <p class="dashboard-change positive">+7.2% vs Benchmark</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <h3>Next Report</h3>
+                    <p class="dashboard-value">Q1 2025</p>
+                    <p class="dashboard-change">March 31, 2025</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documents</h3>
+                    <p class="dashboard-value">12</p>
+                    <p class="dashboard-change">New: Q4 Report</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Rationale Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Rationale</h2>
+                <p class="section-subtitle">
+                    Traditional public and private equity funds have limitations that hinder optimal returns and ethical standards. Public funds often lack operational expertise and active ownership, facing short-term pressures, while private equity deals with scarcity, competition, and fundraising/deployment demands that lead to rushed, agenda-driven decisions.
+                </p>
+                <p class="section-subtitle">
+                    Additionally, the industry could benefit from greater diversity of perspectives and experiences, as limited representation across different backgrounds may constrain innovation, advancement and access to differentiated insights.
+                </p>
+                <p class="section-subtitle">
+                    Aionis Partners bridges this gap by focusing on public markets for conviction-based investing, while applying private equity's ownership mindset with high ethical standards and fostering inclusive, meritocratic culture.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Strategy Section -->
+    <section id="what-we-do" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Strategy</h2>
+                <p class="section-subtitle">
+                    Our differentiated approach combines deep operational expertise with technological insight, deployed across two complementary investment pillars.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>We invest in mid-to-large cap companies positioned to capitalize on transformative technology trends and actively shape emerging markets. Our focus spans artificial intelligence infrastructure and applications, electrification ecosystems including EV and grid infrastructure, autonomous driving and mobility services, and robotics and automation across industrial and physical AI applications.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Transformation</h3>
+                    <p>We target undervalued companies with significant value creation potential and identifiable catalysts for change. These opportunities arise from activist shareholders, portfolio optimization initiatives, potential takeover approaches, management transitions, or restructuring plans. Our strategies focus on operational enhancement, strategic repositioning, management upgrades, and capital allocation optimization.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Powered Insights & Processes</h3>
+                    <p>We leverage proprietary artificial intelligence to analyze extensive datasets, identify emerging market trends, and uncover unique investment opportunities across public and private markets. Our bespoke AI tools and processes provide a competitive advantage in research, due diligence, and risk assessment, delivering superior insights tailored to our strategic investment focus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="who-we-are" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <p class="section-subtitle">
+                    Our Team combines deep market insights with financial acumen and operational experience, specializing in identifying and executing high-potential public and private equity opportunities.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="Profilfoto.jpg" alt="Lina Zhou - Founding Partner and Chief Investment Officer" class="member-image">
+                    </div>
+                    <h3>Lina Zhou</h3>
+                    <p class="member-title">Founding Partner and Chief Investment Officer</p>
+                    <p class="member-bio">
+                        With over a decade of investment experience spanning both public and private markets. Brings deep expertise in active ownership and transformation strategies, through roles at Cevian Capital, Europe's largest dedicated activist hedge fund, and Bain Capital, one of the world's leading private equity firms.
+                    </p>
+                    <p class="member-bio">
+                        Committed to making investment decisions based on independent judgment, a rigorous selection process and high ethical standards. Will invest 95% of own liquid wealth into fund to ensure alignment with investors' interest.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Operating Partners & Board Members</h3>
+                    <p class="member-title">Executive Experience</p>
+                    <p class="member-bio">
+                        Our Operating Partners bring hands-on executive experience, collaborating with portfolio companies to drive operational excellence and strategic transformation, also via board seats if required.
+                    </p>
+                    <p class="member-bio">
+                        Combined expertise in operational improvement, strategic repositioning, and value creation across diverse sectors and geographies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Track Record Section -->
+    <section id="focus" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Track Record</h2>
+                <p class="section-subtitle">
+                    Proven performance with significant outperformance versus benchmarks, 
+                    demonstrating our ability to identify and execute exceptional investment opportunities.
+                </p>
+            </div>
+            
+            <div class="track-record-content">
+                <div class="track-record-image">
+                    <img src="TrackRecord.jpg" alt="Aionis Partners Performance Track Record" class="performance-chart">
+                </div>
+                <div class="track-record-highlight">
+                    <h3>YTD 2025 Performance</h3>
+                    <p class="performance-number">17.30%</p>
+                    <p class="performance-description">True Time-Weighted Rate of Return</p>
+                    <p class="outperformance">7-20% outperformance vs benchmarks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Investment Process Section -->
+    <section id="investment-process" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Investment Process</h2>
+                <p class="section-subtitle">
+                    A disciplined investment process enhanced by AI-powered insights and proprietary tools
+                </p>
+            </div>
+            
+            <div class="process-flowchart">
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Theme Identification</h4>
+                        <p>Analyze macro technology trends, market sizing, and competitive landscapes</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Universe Screening</h4>
+                        <p>Screen for undervalued assets with operational improvement potential</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Due Diligence</h4>
+                        <p>Conduct in-depth research, expert networks, and market analysis</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Investment Decision</h4>
+                        <p>Committee review, position sizing, and portfolio integration</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Active Engagement</h4>
+                        <p>Engage with management teams and key stakeholders</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-content">
+                        <h4>Value Realization</h4>
+                        <p>Monitor progress and execute exit strategies</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-highlight">
+                <div class="highlight-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>AI-Powered Insights</h3>
+                    <p>Enhanced by proprietary AI tools & processes throughout our disciplined investment approach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fund Terms Section -->
+    <section id="fund-terms" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fund Terms</h2>
+                <p class="section-subtitle">
+                    Transparent and competitive fee structure designed to align interests with investors. Fund structure follows GP / LP model with minimum 5-10% GP commitment.
+                </p>
+            </div>
+            
+            <div class="fund-terms-grid">
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Management Fee</h3>
+                    <p>1.5% annual management fee</p>
+                    <p>Declining fee structure based on lock-up period</p>
+                </div>
+                
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Fee</h3>
+                    <p>15% performance fee</p>
+                    <p>8% hurdle rate with high watermark protection</p>
+                </div>
+                
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Minimum Investment & Lock-up</h3>
+                    <p>€200,000 minimum investment</p>
+                    <p>2-year lock-up period with fee incentives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio Holdings</h2>
+                <p class="section-subtitle">
+                    Current portfolio positions and allocation across our Technology and Transformation pillars
+                </p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <h3>Technology Holdings (50%)</h3>
+                    <div class="holding-list">
+                        <div class="holding-item">
+                            <span class="holding-name">AI Infrastructure Co.</span>
+                            <span class="holding-weight">15%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">EV Ecosystem Ltd.</span>
+                            <span class="holding-weight">12%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Robotics Solutions</span>
+                            <span class="holding-weight">10%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Autonomous Mobility</span>
+                            <span class="holding-weight">8%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Grid Infrastructure</span>
+                            <span class="holding-weight">5%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <h3>Transformation Holdings (50%)</h3>
+                    <div class="holding-list">
+                        <div class="holding-item">
+                            <span class="holding-name">Industrial Restructuring</span>
+                            <span class="holding-weight">18%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Management Turnaround</span>
+                            <span class="holding-weight">14%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Portfolio Optimization</span>
+                            <span class="holding-weight">10%</span>
+                        </div>
+                        <div class="holding-item">
+                            <span class="holding-name">Strategic Repositioning</span>
+                            <span class="holding-weight">8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investor Documents</h2>
+                <p class="section-subtitle">
+                    Access to quarterly reports, financial statements, and fund documentation
+                </p>
+            </div>
+            
+            <div class="documents-grid">
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Q4 2024 Report</h3>
+                    <p>Quarterly performance and portfolio update</p>
+                    <a href="#" class="document-link">Download PDF</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Annual Report 2024</h3>
+                    <p>Comprehensive annual review and outlook</p>
+                    <a href="#" class="document-link">Download PDF</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Fund Prospectus</h3>
+                    <p>Detailed fund terms and investment strategy</p>
+                    <a href="#" class="document-link">Download PDF</a>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Financial Statements</h3>
+                    <p>Audited financial statements and NAV</p>
+                    <a href="#" class="document-link">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Investment or Information Inquiries</h4>
+                            <p><a href="mailto:info@aionispartners.com">info@aionispartners.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Offices</h4>
+                            <p>Munich, Germany</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Connect</h4>
+                            <p><a href="https://www.linkedin.com/in/lina-zhou-0b781a9a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlDRg3ayWR5m21yEKWe85kQ%3D%3D" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xyzpkdql" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="organization" name="organization" placeholder="Organization">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your investment objectives" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aionis GmbH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 
