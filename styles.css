@@ -46,40 +46,40 @@ html, body {
         box-sizing: border-box;
     }
     
-    /* Center specific sections, not all sections */
-    .section:not(#contact) {
+    /* Center all sections by default */
+    .section {
         text-align: center;
         width: 100%;
         max-width: 100%;
     }
     
-    /* Contact section - left aligned */
-    #contact {
-        text-align: left;
-        width: 100%;
-        max-width: 100%;
+    /* Override contact section completely */
+    section#contact {
+        text-align: left !important;
     }
     
-    #contact .section-header {
-        text-align: center;
+    section#contact .contact-info {
+        text-align: left !important;
     }
     
-    #contact .contact-info {
-        text-align: left;
+    section#contact .contact-details {
+        text-align: left !important;
     }
     
-    #contact .contact-details {
-        text-align: left;
+    section#contact .contact-details h4 {
+        text-align: left !important;
     }
     
-    #contact .contact-details h4,
-    #contact .contact-details p,
-    #contact .contact-details a {
-        text-align: left;
+    section#contact .contact-details p {
+        text-align: left !important;
     }
     
-    #contact .contact-item {
-        text-align: left;
+    section#contact .contact-details a {
+        text-align: left !important;
+    }
+    
+    section#contact .contact-item {
+        text-align: left !important;
     }
     
     /* Fix footer alignment on mobile */
