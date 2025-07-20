@@ -55,25 +55,29 @@ html, body {
     
     /* Keep contact section left-aligned on mobile */
     #contact {
-        text-align: left;
+        text-align: left !important;
     }
     
-    .contact-info {
-        text-align: left;
+    #contact .section-header {
+        text-align: center !important;
     }
     
-    .contact-details {
-        text-align: left;
+    #contact .contact-info {
+        text-align: left !important;
     }
     
-    .contact-details h4,
-    .contact-details p,
-    .contact-details a {
-        text-align: left;
+    #contact .contact-details {
+        text-align: left !important;
     }
     
-    .contact-item {
-        text-align: left;
+    #contact .contact-details h4,
+    #contact .contact-details p,
+    #contact .contact-details a {
+        text-align: left !important;
+    }
+    
+    #contact .contact-item {
+        text-align: left !important;
     }
     
     /* Fix footer alignment on mobile */
