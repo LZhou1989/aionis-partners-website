@@ -67,6 +67,23 @@ html, body {
         text-align: left;
     }
     
+    /* Fix footer alignment on mobile */
+    .footer {
+        text-align: center;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        text-align: center;
+    }
+    
     /* Fix grid layouts for mobile */
     .services-grid,
     .team-grid,
