@@ -212,30 +212,19 @@ function initScrollAnimations() {
     });
 }
 
-// Enable smooth scrolling for mobile
-function enableSmoothScrolling() {
-    // Add smooth scrolling to all internal links
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+// Simple scroll animations (no smooth scrolling that breaks functionality)
+function enableScrollAnimations() {
+    // Add simple fade-in animations without breaking scroll
+    const elementsToAnimate = document.querySelectorAll('.section, .service-card, .team-member, .focus-card, .term-card, .card');
+    elementsToAnimate.forEach(el => {
+        el.classList.add('fade-in');
     });
 }
 
-// Initialize animations and smooth scrolling
+// Initialize animations
 document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
-    enableSmoothScrolling();
+    enableScrollAnimations();
 });
 
 // Counter animation for statistics (if needed)

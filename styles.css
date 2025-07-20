@@ -32,21 +32,13 @@ body {
 html, body {
     overflow-x: hidden;
     width: 100%;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
 }
 
-/* Mobile-specific smooth scrolling */
+/* Mobile-specific improvements */
 @media (max-width: 768px) {
-    html {
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
-    
     body {
         overflow-x: hidden;
-        width: 100vw;
-        position: relative;
+        width: 100%;
     }
     
     /* Ensure all containers are properly centered */
@@ -56,8 +48,6 @@ html, body {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
         box-sizing: border-box;
     }
     
@@ -66,7 +56,6 @@ html, body {
         text-align: center;
         width: 100%;
         max-width: 100%;
-        overflow: hidden;
     }
     
     /* Fix grid layouts for mobile */
