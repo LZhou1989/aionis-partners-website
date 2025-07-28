@@ -25,5 +25,5 @@ if (loginForm) {
 
 // Check if user is already logged in
 if (localStorage.getItem('investorLoggedIn') === 'true') {
-    window.location.href = 'investor-dashboard.html';
+    window.location.href = 'index.html';
 } 
