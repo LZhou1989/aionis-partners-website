@@ -1,4 +1,4 @@
-console.log('Script loaded successfully');
+console.log('Script loaded');
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
