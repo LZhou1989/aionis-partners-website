@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Test - Aionis Partners</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fallback styles in case CSS doesn't load */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-box {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .error {
+            background: #dc3545;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Loading Test</h1>
+    
+    <div class="test-box">
+        <h2>If you see this box in blue with white text, the CSS file is loading correctly.</h2>
+        <p>This means the styles.css file is being found and applied.</p>
+    </div>
+    
+    <div class="error">
+        <h3>If you see this box in red, the CSS file is NOT loading.</h3>
+        <p>This indicates a problem with the file path or server setup.</p>
+    </div>
+    
+    <h3>Troubleshooting Steps:</h3>
+    <ol>
+        <li><strong>Check File Structure:</strong> Make sure styles.css is in the same folder as index.html</li>
+        <li><strong>Use a Local Server:</strong> Don't open the file directly - use a local server instead</li>
+        <li><strong>Check Browser Console:</strong> Press F12 and look for errors in the Console tab</li>
+        <li><strong>Try Different Browser:</strong> Test in Chrome, Firefox, or Edge</li>
+    </ol>
+    
+    <h3>How to Set Up a Local Server:</h3>
+    <p><strong>Option 1 - Python:</strong></p>
+    <pre>python -m http.server 8000</pre>
+    <p>Then open: http://localhost:8000</p>
+    
+    <p><strong>Option 2 - Node.js:</strong></p>
+    <pre>npx http-server</pre>
+    
+    <p><strong>Option 3 - VS Code:</strong></p>
+    <p>Install "Live Server" extension and right-click on index.html → "Open with Live Server"</p>
+    
+    <a href="index.html">← Back to Main Site</a>
+</body>
+</html> 
