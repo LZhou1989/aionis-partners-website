@@ -286,3 +286,78 @@ revealStyle.textContent = `
     }
 `;
 document.head.appendChild(revealStyle); 
+
+// Cookie Consent Banner
+function createCookieConsent() {
+    if (!document.getElementById('cookie-consent')) {
+        const cookieBanner = document.createElement('div');
+        cookieBanner.id = 'cookie-consent';
+        cookieBanner.style.cssText = `
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        `;
+        
+        cookieBanner.innerHTML = `
+            <div style="flex: 1; min-width: 300px;">
+                <p style="margin: 0; font-size: 14px;">
+                    This website uses cookies to enhance your experience. By continuing to use this site, you consent to our use of cookies. 
+                    <a href="privacy-policy.html" style="color: #fff; text-decoration: underline;">Learn more</a>
+                </p>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button id="accept-cookies" style="
+                    background: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                ">Accept</button>
+                <button id="decline-cookies" style="
+                    background: transparent;
+                    color: white;
+                    border: 1px solid white;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                ">Decline</button>
+            </div>
+        `;
+        
+        document.body.appendChild(cookieBanner);
+        
+        // Check if user has already made a choice
+        if (localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'none';
+        }
+        
+        // Event listeners
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.style.display = 'none';
+        });
+        
+        document.getElementById('decline-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieBanner.style.display = 'none';
+        });
+    }
+}
+
+// Initialize cookie consent when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    createCookieConsent();
+}); 
