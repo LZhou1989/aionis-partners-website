@@ -60,7 +60,7 @@ aionis-partners-website/
 
 ## Testing Checklist
 - [ ] Main site loads correctly
-- [ ] Investor login works (username: `investor`, password: `aionis2025`)
+- [ ] Investor login works (username: `investor`, password: `aionis2026`)
 - [ ] All sections display properly after login
 - [ ] Contact form sends emails via Formspree
 - [ ] Logo links back to home page

@@ -10,7 +10,7 @@ if (loginForm) {
         
         // Simple authentication (in production, this would be server-side)
         // For demo purposes, using simple credentials
-        if (username === 'investor' && password === 'aionis2025') {
+        if (username === 'investor' && password === 'aionis2026') {
             // Store login state
             localStorage.setItem('investorLoggedIn', 'true');
             localStorage.setItem('investorUsername', username);
