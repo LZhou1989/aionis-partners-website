@@ -146,7 +146,28 @@ html, body {
     }
     
     /* Fix grid layouts for mobile */
-    .services-grid,
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Reorder service cards on mobile: Transformation first, then Technology, then AI */
+    .services-grid .service-card:nth-child(1) {
+        order: 2; /* Technology becomes 2nd */
+    }
+    
+    .services-grid .service-card:nth-child(2) {
+        order: 1; /* Transformation becomes 1st */
+    }
+    
+    .services-grid .service-card:nth-child(3) {
+        order: 3; /* AI stays 3rd */
+    }
+    
     .team-grid,
     .focus-grid,
     .fund-terms-grid {
