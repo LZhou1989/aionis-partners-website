@@ -16,7 +16,7 @@ if (loginForm) {
             localStorage.setItem('investorUsername', username);
             
             // Redirect back to main page with full access
-            window.location.href = 'index.html';
+            window.location.href = 'main.html';
         } else {
             alert('Invalid credentials. Please try again.');
         }
@@ -25,5 +25,5 @@ if (loginForm) {
 
 // Check if user is already logged in
 if (localStorage.getItem('investorLoggedIn') === 'true') {
-    window.location.href = 'index.html';
+    window.location.href = 'main.html';
 } 
