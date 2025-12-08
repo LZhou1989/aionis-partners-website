@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aionis Partners - Investment Partnership Solutions</title>
+    <script>
+        // Immediate redirect check - execute before any content loads
+        if (localStorage.getItem('siteAccessGranted') !== 'true') {
+            window.location.replace('coming-soon.html');
+        }
+    </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Hide all content until access is verified */
+        html:not(.access-granted) body {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
+    <script>
+        // Verify access and show content
+        if (localStorage.getItem('siteAccessGranted') === 'true') {
+            document.documentElement.classList.add('access-granted');
+        } else {
+            // Final redirect check
+            window.location.replace('coming-soon.html');
+        }
+    </script>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
