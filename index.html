@@ -125,6 +125,8 @@
     font-family:var(--display); font-weight:400;
     font-size:18px; letter-spacing:.14em; text-transform:uppercase;
     color:var(--bone);
+    white-space:nowrap;
+    min-width:0;
   }
   .nav-logo .glyph{
     font-family:var(--display); font-weight:300;
@@ -158,6 +160,12 @@
     .nav{padding:16px 20px}
     .nav.scrolled{padding:12px 20px}
     .nav-right .nav-link{display:none}
+    .nav-logo{
+      font-size:clamp(13px, 3.4vw, 16px);
+      letter-spacing:.1em;
+      gap:10px;
+    }
+    .nav-logo .glyph{font-size:clamp(17px, 4.2vw, 20px)}
   }
 
   /* ── Hero ───────────────────────────────────── */
@@ -189,6 +197,23 @@
     object-position: center 0%;
     filter: blur(5px) saturate(.92) brightness(1.05);
     transform-origin:50% 22%;
+  }
+  /* Phones (portrait): desktop offsets overscale/crop the peak; full-bleed cover keeps the mountain in frame */
+  @media (max-width: 720px) and (orientation: portrait){
+    .hero-photo-veil img{
+      left:0; top:0; width:100%; height:100%;
+      object-fit:cover;
+      object-position:center 12%;
+      transform-origin:50% 14%;
+    }
+  }
+  /* Landscape phone / short mobile width: intermediate framing */
+  @media (max-width: 720px) and (orientation: landscape){
+    .hero-photo-veil img{
+      left:-6%; top:-32%; width:112%; height:140%;
+      object-position:center 0%;
+      transform-origin:50% 20%;
+    }
   }
 
   /* Cinematic CSS Nordic scene */
@@ -606,15 +631,20 @@
     margin: 0; max-width: 14ch; color:var(--bone);
   }
   .approach h2 em{ font-style:italic; color: var(--mist) }
-  .approach-body{ display:flex; flex-direction:column; gap:36px; padding-top:8px }
+  /* Single measure so lede + body share the same wrap width (right edge aligns) */
+  .approach-body{
+    display:flex; flex-direction:column; gap:36px; padding-top:8px;
+    font-size: 17px; /* 56ch matches prior .approach-text p (17px body copy) */
+    max-width: 56ch;
+  }
   .approach-lede{
     font-family:var(--display); font-style:italic; font-weight:300;
     font-size: clamp(20px, 1.6vw, 26px);
-    line-height: 1.45; color: var(--bone); max-width: 36ch;
+    line-height: 1.45; color: var(--bone);
   }
   .approach-text p{
     font-size: 17px; line-height: 1.65; color: var(--mist);
-    max-width: 56ch; margin: 0 0 18px;
+    margin: 0 0 18px;
   }
 
   .pillars{
@@ -740,10 +770,15 @@
   }
   .contact h2 em{ font-style:italic; color: var(--slate-soft) }
   .contact-side{ padding-top: 14px; display:flex; flex-direction:column; gap: 40px }
-  .contact-side p{
+  /* Same 56ch column measure as .approach-body (17px base for ch) */
+  .contact-intro{
+    font-size: 17px;
+    max-width: 56ch;
+  }
+  .contact-intro p{
     font-family:var(--display); font-style:italic; font-weight:300;
     font-size: clamp(18px, 1.5vw, 22px);
-    line-height: 1.45; margin:0; color: var(--bg); max-width: 36ch;
+    line-height: 1.45; margin:0; color: var(--bg);
   }
   .email{
     display:inline-flex; align-items:baseline; gap:14px;
@@ -799,6 +834,10 @@
   }
   .foot-copy{ flex:1 1 auto; min-width:0 }
   .foot-links{ display:flex; gap: 28px; margin-left:auto; flex-shrink:0 }
+  @media (max-width:720px){
+    .foot-meta{ flex-direction:column; align-items:flex-start }
+    .foot-links{ margin-left:0 }
+  }
   .foot-links a{
     color: var(--mist-2); text-decoration:none;
     font-family:var(--mono); font-size:10px; letter-spacing:.22em;
@@ -966,7 +1005,7 @@
       </p>
       <div class="approach-text reveal delay-2">
         <p>
-          We invest with conviction and a long-term perspective, combining engaged judgement with discretion. Our approach reflects an ownership mindset shaped by prior experience across leading private equity and public market firms.
+          We invest with conviction and a long-term perspective, combining engaged judgement with discretion and hands-on support. Our approach reflects an ownership mindset shaped by prior experience across leading private equity and public market firms.
         </p>
       </div>
     </div>
@@ -977,14 +1016,14 @@
       <span class="idx">i.</span>
       <div>
         <h3>Public markets</h3>
-        <p>Long-term positions in listed businesses we understand, held with the conviction of an owner.</p>
+        <p>Long-term minority positions in listed businesses we understand, held with the conviction of an engaged owner.</p>
       </div>
     </div>
     <div class="pillar reveal delay-1">
       <span class="idx">ii.</span>
       <div>
         <h3>Private markets</h3>
-        <p>Selective, hands-on partnerships with operators, founders, and family-held companies.</p>
+        <p>Selective, hands-on partnerships with operators, founders, and family-held companies. We can act as a majority or minority owner and long-term steward of businesses.</p>
       </div>
     </div>
   </div>
@@ -998,9 +1037,11 @@
       <h2 class="reveal delay-1" style="margin-top:48px">Begin a <em>conversation.</em></h2>
     </div>
     <div class="contact-side">
-      <p class="reveal delay-1">
-        If our approach resonates with yours, we would be glad to hear from you.
-      </p>
+      <div class="contact-intro reveal delay-1">
+        <p>
+          If you are interested in our approach or want to discuss ideas, we would be glad to hear from you.
+        </p>
+      </div>
       <a href="mailto:info@aionispartners.com" class="email reveal delay-2">
         info@aionispartners.com
         <span class="arrow">↗</span>
@@ -1070,8 +1111,12 @@
     if (!ticking){
       requestAnimationFrame(() => {
         const y = Math.min(window.scrollY, 900);
-        if (heroMedia) heroMedia.style.transform = `translateY(${y * 0.19}px)`;
-        if (heroPhotoVeil) heroPhotoVeil.style.transform = `translate3d(0, ${y * -0.052}px, 0)`;
+        const phone = window.matchMedia('(max-width: 720px)').matches;
+        /* Less parallax on small screens so the mountain stays visible while scrolling */
+        const mediaK = phone ? 0.09 : 0.19;
+        const veilK = phone ? -0.018 : -0.052;
+        if (heroMedia) heroMedia.style.transform = `translateY(${y * mediaK}px)`;
+        if (heroPhotoVeil) heroPhotoVeil.style.transform = `translate3d(0, ${y * veilK}px, 0)`;
         ticking = false;
       });
       ticking = true;

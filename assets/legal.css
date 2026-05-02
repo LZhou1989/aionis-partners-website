@@ -84,6 +84,8 @@ body.legal-page {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--fg);
+  white-space: nowrap;
+  min-width: 0;
 }
 
 .nav-logo .glyph {
@@ -96,6 +98,17 @@ body.legal-page {
   transform: translateY(-1px);
   display: inline-flex;
   align-items: center;
+}
+
+@media (max-width: 720px) {
+  .nav-logo {
+    font-size: clamp(13px, 3.4vw, 16px);
+    letter-spacing: 0.1em;
+    gap: 10px;
+  }
+  .nav-logo .glyph {
+    font-size: clamp(17px, 4.2vw, 20px);
+  }
 }
 
 .glyph svg {
@@ -292,6 +305,16 @@ footer.legal-footer {
   flex-wrap: wrap;
   margin-left: auto;
   flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .legal-foot-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .legal-foot-links {
+    margin-left: 0;
+  }
 }
 
 .legal-foot-links a {
