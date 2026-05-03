@@ -178,11 +178,7 @@
     position:absolute; inset:0; z-index:0;
     overflow:hidden;
   }
-  .hero-media video{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover;
-  }
-  /* Soft photographic veil (Background.jpg) */
+  /* Soft photographic veil (Background.jpg / video.mp4) */
   .hero-photo-veil{
     position:absolute; inset:0;
     z-index:1;
@@ -190,28 +186,28 @@
     opacity:.38;
     transition: opacity .5s ease;
   }
-  .hero-photo-veil img{
-    position:absolute; left:-10%; top:-54%; width:120%; height:176%;
+  .hero-photo-veil video{
+    position:absolute; left:-10%; top:-88%; width:120%; height:176%;
     object-fit:cover;
-    /* Bias to upper part of image so more mountain / peak shows */
-    object-position: center 0%;
+    /* Anchor to top of frame so cover crops from below — more mountain in view */
+    object-position: center top;
     filter: blur(5px) saturate(.92) brightness(1.05);
     transform-origin:50% 22%;
   }
   /* Phones (portrait): desktop offsets overscale/crop the peak; full-bleed cover keeps the mountain in frame */
   @media (max-width: 720px) and (orientation: portrait){
-    .hero-photo-veil img{
-      left:0; top:0; width:100%; height:100%;
+    .hero-photo-veil video{
+      left:0; top:-14%; width:100%; height:120%;
       object-fit:cover;
-      object-position:center 12%;
+      object-position:center top;
       transform-origin:50% 14%;
     }
   }
   /* Landscape phone / short mobile width: intermediate framing */
   @media (max-width: 720px) and (orientation: landscape){
-    .hero-photo-veil img{
-      left:-6%; top:-32%; width:112%; height:140%;
-      object-position:center 0%;
+    .hero-photo-veil video{
+      left:-6%; top:-61%; width:112%; height:140%;
+      object-position:center top;
       transform-origin:50% 20%;
     }
   }
@@ -928,8 +924,7 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-media">
-    <video id="hero-video" autoplay muted loop playsinline preload="auto" style="display:none"></video>
-    <!-- Cinematic CSS-only Nordic scene (works offline, swaps out when video loads) -->
+    <!-- Cinematic CSS-only Nordic scene (works offline) -->
     <div class="scene" id="hero-scene">
       <!-- horizon (default) -->
       <div class="sky"></div>
@@ -975,7 +970,7 @@
       </div>
     </div>
     <div class="hero-photo-veil" aria-hidden="true">
-      <img src="./Background.jpg" alt="" width="1920" height="1080" decoding="async" fetchpriority="high" />
+      <video src="./video.mp4" autoplay muted loop playsinline preload="auto" poster="./Background.jpg" width="1920" height="1080"></video>
     </div>
     <div class="horizon"></div>
     <div class="vignette"></div>
@@ -1084,18 +1079,6 @@
   };
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
-
-  // Hero video swap-in: if a real video file is attached via <source>, show it
-  const heroVideo = document.getElementById('hero-video');
-  const heroScene = document.getElementById('hero-scene');
-  if (heroVideo && heroVideo.querySelector('source')){
-    heroVideo.addEventListener('canplay', () => {
-      heroVideo.style.display = 'block';
-      if (heroScene) heroScene.style.display = 'none';
-      const veil = document.querySelector('.hero-photo-veil');
-      if (veil) veil.style.opacity = '0';
-    });
-  }
 
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
